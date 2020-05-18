@@ -1,0 +1,20 @@
+.side
+  .menu
+    = link_to users_path, class: "menu__1" do
+      .menu__1__link
+        .menu__1__link__icon
+          %i.fas.fa-home
+        .menu__1__link__name
+          ホーム
+    = link_to controller: 'users', action: 'show', name: "mypost", class: "menu__2" do
+      .menu__2__link
+        .menu__2__link__icon
+          %i.fas.fa-home
+        .menu__2__link__name
+          投稿一覧
+    = link_to users_path, class: "menu__3" do
+      .menu__3__link
+        .menu__3__link__icon
+          %i.fas.fa-home
+        .menu__3__link__name
+          ホーム

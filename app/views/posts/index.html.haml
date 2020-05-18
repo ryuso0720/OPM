@@ -1,15 +1,4 @@
-.header
-  .header__left
-    OP-M
-  .header__center
-    .header__center__search
-      %input{placeholder: "キーワードで検索"}
-      %button 検索
-  .header__right
-    .header__right__login
-      = link_to 'ログイン'
-    .header__right__new
-      = link_to '新規登録'
+= render "partial/header"
 .content-1
   %h1 OP-M
   %h2 Output - manager
@@ -17,6 +6,40 @@
 .content-2
   How to use
 .content-3
+.container.js-postsIndex
+  .row
+    - @posts.each do |post|
+      .col.s4.m6
+        .card
+          %span.card-title{'v-on:click': "setPostInfo(#{post.id})"}
+            = post.title
+  .row{'v-show': 'postInfoBool'}
+    .col.s12.m12
+      .card.blue-grey.darken-1
+        .card-content.white-text
+          %span.card-title
+            {{ postInfo.title }}
+          .detail
+            {{ postInfo.today }}
+          .detail
+            {{ postInfo.time }}
+          .detail
+            {{ postInfo.text }}
+
+= javascript_pack_tag 'posts/index'
+
 .content-4
 .new-posts
+  .new-posts__list
+    .new-posts__list__inform
+      新着投稿一覧
+    .new-posts__list__upper
+      .new-posts__list__upper__box
+        .new-posts__list__upper__box__left
+        .new-posts__list__upper__box__right
+          .new-posts__list__upper__box__right__title
+            = link_to "#" do
+              投稿タイトルを表示
+          .new-posts__list__upper__box__right__user
+            by nickname
 .footer

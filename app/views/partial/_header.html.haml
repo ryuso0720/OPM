@@ -1,0 +1,19 @@
+.header
+  .header__left
+    OP-M
+  .header__center
+    .header__center__search
+      %input{placeholder: "キーワードで検索"}
+      %button 検索
+  .header__right
+    - if user_signed_in?
+      .header__right__login
+        = link_to users_path do
+          = current_user.name
+      .header__right__new
+        = link_to '新規投稿',new_post_path
+    - else
+      .header__right__login
+        = link_to 'ログイン', new_user_session_path
+      .header__right__new
+        = link_to '新規登録'

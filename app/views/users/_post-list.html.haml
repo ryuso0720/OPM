@@ -1,0 +1,10 @@
+.post-list.js-usersShow
+  .row
+    - @posts.each do |post|
+      .col.s4.m6
+        .card
+          %span.card-title{'v-on:click': "setPostInfo(#{post.id})"}
+            = post.title
+
+= javascript_pack_tag 'users/show'
+

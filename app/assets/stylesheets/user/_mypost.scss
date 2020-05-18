@@ -1,0 +1,19 @@
+.post-list {
+  width: 600px;
+  height: 100vh;
+  margin-top: 60px;
+  float: left;
+  margin-left: 300px;
+  position: fixed;
+}
+
+
+
+
+.post-preview {
+  width: calc(100vw - 900px);
+  height: 100vh;
+  margin-top: 60px;
+  background-color: yellowgreen;
+  float: right;
+}
