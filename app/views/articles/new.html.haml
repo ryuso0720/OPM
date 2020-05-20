@@ -1,0 +1,32 @@
+.container
+  .row
+    .col.s8.offset-s2
+      %h2.red-text.text-lighten-3 articles#new
+      = form_for @article do |f|
+        .row
+          #preview-area
+          .title-field
+            = f.label "title"
+            = f.text_field :title
+          .post__drop__box__container
+            .prev-content
+            .label-content
+              %label{for: "item_images_attributes_0_image", class: "abel-box", id: "label-box--0"}
+                %pre.label-box__text-visible クリックしてファイルをアップロード
+            .hidden-content
+              = f.fields_for :images do |i|
+                = i.file_field :image, class: "hidden-field"
+                %input{class:"hidden-field", type: "file", name: "article[photos_attributes][1][image]", id: "article_photos_attributes_1_image" }
+                %input{class:"hidden-field", type: "file", name: "article[photos_attributes][2][image]", id: "article_photos_attributes_2_image" }
+                %input{class:"hidden-field", type: "file", name: "article[photos_attributes][3][image]", id: "article_photos_attributes_3_image" }
+                %input{class:"hidden-field", type: "file", name: "article[photos_attributes][4][image]", id: "article_photos_attributes_4_image" }
+          .input-field
+            = f.label "content", for: "md-textarea"
+            = f.text_area :body, class: "materialize-textarea", id: "md-textarea"
+        .row
+          .col.s4
+            .btn#markdown.disabled markdown
+          .col.s4
+            .btn#preview preview
+          .col.s4
+            = f.submit "send", class: "btn"

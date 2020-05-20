@@ -70,6 +70,27 @@
         }
       }
      }
+     &__4 {
+      &__link {
+        margin-top: 30px;
+        width: 240px;
+        height: 40px;
+        background-color: grey;
+        display: flex;
+        justify-content: left;
+        &__icon {
+          color: white;
+          font-size: 20px;
+          line-height: 40px;
+          margin-left: 20px;
+        }
+        &__name {
+          color: white;
+          line-height: 40px;
+          margin-left: 20px;
+        }
+      }
+     }
 
 
 
@@ -88,5 +109,53 @@
   width: calc(100vw - 300px);
   height: 100vh;
   float: left;
+  margin-left: 300px;
   margin-top: 60px;
+  position: fixed;
+}
+
+#title {
+  height: 100vh;
+  width: 500px;
+  border-right: #3e3e3e 3px solid;
+  padding-top: 20px;
+  position: absolute;
+  h1.title {
+    font-size: 33px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.row {
+  height: 100vh;
+  .col.s4.m6 {
+    width: 500px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    border-bottom: 1px solid #3e3e3e;
+    font-weight: bold;
+    overflow: scroll;
+  }
+  .col.s12.m12{
+    background-color: green;
+    width: calc(100vw - 800px);
+    height: 100vh;
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+  }
+}
+
+.card-content.white-text{
+  .card-title {
+    text-align: center;
+    border-bottom: 1px solid #3e3e3e;
+    font-weight: bold;
+  }
+  .today {
+    
+  }
 }

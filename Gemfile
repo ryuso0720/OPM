@@ -71,4 +71,11 @@ gem 'font-awesome-sass'
 gem 'devise'
 gem 'webpacker', github: 'rails/webpacker'
 gem 'faker'
+gem 'redcarpet'
+gem 'coderay'
+gem 'jquery-rails'
+gem 'materialize-sass'
+gem 'carrierwave'
+gem "mini_magick"
+gem "chartkick" 
 

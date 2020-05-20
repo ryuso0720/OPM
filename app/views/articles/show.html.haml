@@ -1,0 +1,8 @@
+.container
+  .row
+    .col.s8.offset-s2
+      %h2.red-text.text-lighten-3 articles#show
+      .card
+        .card-content
+          %span
+            = markdown(@article.body)

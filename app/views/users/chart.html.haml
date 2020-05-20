@@ -1,0 +1,9 @@
+= render "partial/header"
+
+= render "users/side"
+
+.chart
+  .chart__content-100
+    = column_chart @posts.limit(30).pluck(:today, :time),id: 'study-chart',
+      width: '90%',height: '500px',colors: ['#b00'],
+      min: 0, max: 24

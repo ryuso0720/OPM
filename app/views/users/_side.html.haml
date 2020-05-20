@@ -1,20 +1,26 @@
 .side
   .menu
-    = link_to users_path, class: "menu__1" do
+    = link_to new_post_path, class: "menu__1" do
       .menu__1__link
         .menu__1__link__icon
-          %i.fas.fa-home
+          %i.fas.fa-plus-square
         .menu__1__link__name
-          ホーム
-    = link_to controller: 'users', action: 'show', name: "mypost", class: "menu__2" do
+          メモ作成
+    = link_to users_path, class: "menu__2" do
       .menu__2__link
         .menu__2__link__icon
-          %i.fas.fa-home
+          %i.far.fa-sticky-note
         .menu__2__link__name
-          投稿一覧
-    = link_to users_path, class: "menu__3" do
+          メモ一覧
+    = link_to controller: 'users', action: 'show', name: "mypost", class: "menu__3" do
       .menu__3__link
         .menu__3__link__icon
-          %i.fas.fa-home
+          %i.fas.fa-newspaper
         .menu__3__link__name
-          ホーム
+          投稿一覧
+    = link_to controller: 'users', action: 'show', name: "chart", class: "menu__4" do
+      .menu__3__link
+        .menu__3__link__icon
+          %i.fas.fa-chart-bar
+        .menu__3__link__name
+          学習時間

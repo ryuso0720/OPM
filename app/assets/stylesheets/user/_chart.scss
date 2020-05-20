@@ -1,0 +1,12 @@
+.chart {
+  margin-left: 300px;
+  position: absolute;
+  width: calc(100vw - 300px);
+  margin-top: 60px;
+  padding-top: 30px;
+  &__content100 {
+    #study-chart {
+      margin: 0 auto;
+    }
+  }
+}

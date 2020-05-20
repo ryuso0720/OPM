@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'page#home'
   root "posts#index"
   resources :posts do
   end
@@ -9,6 +8,15 @@ Rails.application.routes.draw do
     resources :posts, only: :show
   end
 
+  resources :articles, only: [:show, :new, :create] do
+    resources :photos, only: :creste
+  end
+  namespace :api, format: 'json' do
+    get 'articles/preview'
+  end
+
+
   resources :users, only: :index
   get 'users/:name', controller: 'users', action: 'show'
+
 end

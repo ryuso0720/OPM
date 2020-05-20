@@ -1,7 +1,13 @@
+// @import "materialize/components/color-variables";
+// $primary-color: color("deep-orange", "darken-4") !default;
+@import "materialize";
 @import "reset";
 @import "top";
+@import "articles";
 @import "user/account";
 @import "user/home";
 @import "user/mypost";
+@import "user/chart";
+@import "article/form";
 @import "font-awesome-sprockets";
 @import "font-awesome";

@@ -2,13 +2,13 @@ import Vue from 'vue/dist/vue.esm';
 import axios from 'axios';
 
 new Vue({
-  el: '.js-postsIndex',
+  el: '.js-usersIndex',
   data: {
     postInfo: {},
     postInfoBool: false
   },
   methods: {
-    setpostInfo(id){
+    setPostInfo(id){
       axios.get(`api/posts/${id}.json`)
         .then(res => {
           this.postInfo = res.data;

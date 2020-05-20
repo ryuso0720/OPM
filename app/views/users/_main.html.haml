@@ -1,1 +1,27 @@
-.main
+.main.js-usersIndex
+  .row#title
+    %h1.title
+      メモ一覧
+    - @posts.each do |post|
+      .col.s4.m6
+        .card
+          %span.card-title{'v-on:click': "setPostInfo(#{post.id})"}
+            = post.title
+  .row{'v-show': 'postInfoBool'}
+    .col.s12.m12
+      .card.blue-grey.darken-1
+        .card-content.white-text
+          %span.card-title
+            {{ postInfo.title }} 
+          .today
+            .detail-label-1
+              学習日時：
+            .detail-1
+              {{ postInfo.today }} 
+          .detail-2
+            {{ postInfo.time }} 時間
+          .detail-3
+            {{ postInfo.text }}
+
+= javascript_pack_tag 'users/index'
+
