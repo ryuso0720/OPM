@@ -24,12 +24,4 @@
               = article.user.name
             .new-posts__list__upper__box__right__box__now
               = article.created_at.strftime("%Y年%m月%d日 %H時%M分")
-.footer
-  .footers
-    .footers__title
-      Output - manager
-    .footers__message
-      .footers__message__1
-        ©️2020
-      .footers__message__2
-        OP-M:ryuso0720
+= render "partial/footer"

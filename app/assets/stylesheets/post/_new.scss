@@ -1,4 +1,40 @@
 .upform {
   margin-top: 60px;
   position: absolute;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 80px;
+  text-align: center;
+  &__post {
+    width: 60%;
+    margin-top: 30px;
+    margin: 0 auto;
+    border: 1px solid #3eadfe;
+    box-shadow: 10px 10px 15px -10px;
+    &__text {
+      textarea {
+        height: 200px;
+      }
+    }
+  }
+  &__postupper {
+    margin-top: 30px;
+    &__button {
+    .submit-btn {
+      width: 100px;
+      height: 50px;
+      display: inline-block;
+      padding:5px 10px;
+      color: #FFF;
+      text-decoration :none;
+      background: skyblue;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      transition: .3s;
+    }
+    .submit-btn:hover {
+      box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    }
+    }
+  }
 }
