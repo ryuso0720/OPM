@@ -88,6 +88,7 @@
 .new-posts {
   background-color: yellow;
   padding-top: 32px;
+  padding-bottom: 32px;
   &__list {
     width: 50%;
     background-color: white;
@@ -137,7 +138,23 @@
 
 .footer {
   background-color: #3e3e3e;
-  margin-top: 60px;
-  padding: 32px 16px;
-  height: 300px;
+  padding: 16px 8px;
+  height: 100px;
+  text-align: center;
+  .footers {
+    &__title {
+      font-size: 30px;
+      color:#eee;
+      font-weight: bold;
+    }
+    &__message {
+      justify-content: center;
+      display: flex;
+      color: #eee;
+      margin-top: 10px;
+      &__1 {
+        margin-right: 10px;
+      }
+    }
+  }
 }
