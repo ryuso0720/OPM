@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :posts, only: :show
   end
 
-  resources :articles, only: [:show, :new, :create] do
+  resources :articles, only: [:show, :new, :create, :edit, :destroy, :update] do
     resources :photos, only: :creste
   end
   namespace :api, format: 'json' do

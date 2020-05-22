@@ -17,11 +17,17 @@
             .detail-label-1
               学習日時：
             .detail-1
-              {{ postInfo.today }} 
-          .detail-2
+              {{ postInfo.today }}
+          .time
+            .detail-label-2
+              学習時間：
+            .detail-2
             {{ postInfo.time }} 時間
-          .detail-3
-            {{ postInfo.text }}
+          .memo
+            .detail-label-3
+              %span.box-title メモ内容
+              %p.detail-3
+                %p{"v-html" => "postInfo.text"}
 
 = javascript_pack_tag 'users/index'
 

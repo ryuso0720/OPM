@@ -8,18 +8,25 @@
           .title-field
             = f.label "title"
             = f.text_field :title
-          .post__drop__box__container
-            .prev-content
-            .label-content
-              %label{for: "item_images_attributes_0_image", class: "abel-box", id: "label-box--0"}
-                %pre.label-box__text-visible クリックしてファイルをアップロード
-            .hidden-content
-              = f.fields_for :images do |i|
-                = i.file_field :image, class: "hidden-field"
-                %input{class:"hidden-field", type: "file", name: "article[photos_attributes][1][image]", id: "article_photos_attributes_1_image" }
-                %input{class:"hidden-field", type: "file", name: "article[photos_attributes][2][image]", id: "article_photos_attributes_2_image" }
-                %input{class:"hidden-field", type: "file", name: "article[photos_attributes][3][image]", id: "article_photos_attributes_3_image" }
-                %input{class:"hidden-field", type: "file", name: "article[photos_attributes][4][image]", id: "article_photos_attributes_4_image" }
+          #image-box
+            #previews
+              .preview
+                - if @article.persisted?
+                  - @article.photos.each_with_index do |image, i|
+                    = image_tag image.image.url, data: { index: i }, width: "144", height: '144'
+              .label-content
+                %pre.label-box__text-visible.fa.fa-camera
+            = f.fields_for :photos do |image|
+
+              .js-file_group(data-index = "#{image.index}")
+                = image.file_field :image, class: 'js-file hidden'
+                .js-remove.hidden(data-index = "#{image.index}") 削除#{image.index}
+              - if @article.persisted?
+                = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+            - if @article.persisted?
+              .js-file_group(data-index = "#{@article.photos.count}")
+                = file_field_tag :image, name: "article[photos_attributes][#{@article.photos.count}][image]", class: 'js-file'
+                .js-remove 削除
           .input-field
             = f.label "content", for: "md-textarea"
             = f.text_area :body, class: "materialize-textarea", id: "md-textarea"

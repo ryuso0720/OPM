@@ -12,12 +12,16 @@
     .new-posts__list__inform
       新着投稿一覧
     .new-posts__list__upper
+    - @articles.each do |article|
       .new-posts__list__upper__box
         .new-posts__list__upper__box__left
         .new-posts__list__upper__box__right
           .new-posts__list__upper__box__right__title
-            = link_to "#" do
-              投稿タイトルを表示
-          .new-posts__list__upper__box__right__user
-            by nickname
+            = link_to article_path "#{article.id}" do
+              = article.title
+          .new-posts__list__upper__box__right__box
+            .new-posts__list__upper__box__right__box__user
+              = article.user.name
+            .new-posts__list__upper__box__right__box__now
+              = article.created_at.strftime("%Y年%m月%d日 %H時%M分")
 .footer

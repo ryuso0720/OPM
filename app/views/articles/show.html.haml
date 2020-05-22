@@ -1,8 +1,32 @@
-.container
+= render "partial/header"
+.container-show
   .row
     .col.s8.offset-s2
-      %h2.red-text.text-lighten-3 articles#show
+      %h2.article-title
+        = @article.title
+      - if user_signed_in? && current_user.id == @article.user_id
+        .content-area
+          %input#cp_navimenuid{:type => "checkbox"}/
+          %label.menu{:for => "cp_navimenuid"}
+            .menubar
+              %span.bar
+              %span.bar
+              %span.bar
+            %ul
+              %li
+                = link_to '編集', edit_article_path(@article.id),class: "article-edit", method: :get
+              %li
+                = link_to '削除', article_path(@article.id),class: "article-delete", method: :delete
+              %li
+                = link_to '投稿一覧', root_path
+              %li
+                = link_to 'いいね！一覧', root_path
+      .tag
       .card
         .card-content
           %span
             = markdown(@article.body)
+      .photo
+        - @article.photos.each do |article|
+          .photo__area
+            = image_tag "#{article.image}"

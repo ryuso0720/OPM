@@ -16,7 +16,7 @@
       .upform__post__text
         = f.label :text, "本文"
         %br
-        = f.text_area :text, class: "input_text"
+        = f.text_area :text, class: "materialize-textarea"
     .upform__postupper
       .upform__postupper__button
         = f.submit '投稿する',  class: "submit-btn", data: { disable_with: '投稿中...' }

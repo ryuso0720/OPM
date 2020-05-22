@@ -2,7 +2,8 @@ module MarkdownHelper
   def markdown(text)
     unless @markdown
       options = {
-        hard_wrap: true
+        hard_wrap: true,
+        filter_html: true
       }
       extensions = {
         no_intra_emphasis: true,

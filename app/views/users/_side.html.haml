@@ -1,26 +1,26 @@
 .side
-  .menu
-    = link_to new_post_path, class: "menu__1" do
-      .menu__1__link
-        .menu__1__link__icon
+  .side-menu
+    = link_to new_post_path, class: "side-menu__1" do
+      .side-menu__1__link
+        .side-menu__1__link__icon
           %i.fas.fa-plus-square
-        .menu__1__link__name
+        .side-menu__1__link__name
           メモ作成
-    = link_to users_path, class: "menu__2" do
-      .menu__2__link
-        .menu__2__link__icon
+    = link_to users_path, class: "side-menu__2" do
+      .side-menu__2__link
+        .side-menu__2__link__icon
           %i.far.fa-sticky-note
-        .menu__2__link__name
+        .side-menu__2__link__name
           メモ一覧
-    = link_to controller: 'users', action: 'show', name: "mypost", class: "menu__3" do
-      .menu__3__link
-        .menu__3__link__icon
+    = link_to controller: 'users', action: 'show', name: "mypost", class: "side-menu__3" do
+      .side-menu__3__link
+        .side-menu__3__link__icon
           %i.fas.fa-newspaper
-        .menu__3__link__name
+        .side-menu__3__link__name
           投稿一覧
-    = link_to controller: 'users', action: 'show', name: "chart", class: "menu__4" do
-      .menu__3__link
-        .menu__3__link__icon
+    = link_to controller: 'users', action: 'show', name: "chart", class: "side-menu__4" do
+      .side-menu__3__link
+        .side-menu__3__link__icon
           %i.fas.fa-chart-bar
-        .menu__3__link__name
+        .side-menu__3__link__name
           学習時間
