@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :articles, only: [:show, :new, :create, :edit, :destroy, :update] do
     resources :photos, only: :creste
+    resources :likes, only: [:create, :destroy]
   end
   namespace :api, format: 'json' do
     get 'articles/preview'

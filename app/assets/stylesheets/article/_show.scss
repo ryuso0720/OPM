@@ -1,9 +1,9 @@
 .container-show {
   padding-top: 60px;
-  position: fixed;
   width: 100vw;
+  overflow: scroll;
   .row {
-    overflow: scroll;
+    // overflow: scroll;
     .col.s8.offset-s2 {
       h2.article-title{
         color: gray;
@@ -115,4 +115,26 @@
       height: 600px;
     }
   }
+}
+
+// いいねエリア
+.like {
+  width: 100%;
+  font-size: 20px;
+  .article-button-like {
+    background-color:#63c678 ;
+    display: flex;
+    i {
+      color: red;
+    }
+    .like-count {
+      color: #1b2538;
+    }
+  }
+}
+.like-count-only {
+  width: 150px;
+  font-size: 20px;
+  background-color: #63c678;
+  text-align: center;
 }

@@ -1,9 +1,10 @@
-.container
-  .row
+= render "partial/header"
+.container-article
+  .row-all
     .col.s8.offset-s2
-      %h2.red-text.text-lighten-3 articles#new
+      .red-text.text-lighten-3
       = form_for @article do |f|
-        .row
+        .row-pre
           #preview-area
           .title-field
             = f.label "title"
@@ -30,7 +31,7 @@
           .input-field
             = f.label "content", for: "md-textarea"
             = f.text_area :body, class: "materialize-textarea", id: "md-textarea"
-        .row
+        .row-pre2
           .col.s4
             .btn#markdown.disabled markdown
           .col.s4

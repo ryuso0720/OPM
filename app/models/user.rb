@@ -7,5 +7,8 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :articles
 
+  has_many :likes
+  has_many :articles, through: :likes
+
   validates :name, presence: true, uniqueness: true
 end

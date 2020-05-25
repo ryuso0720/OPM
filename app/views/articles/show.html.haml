@@ -26,7 +26,13 @@
         .card-content
           %span
             = markdown(@article.body)
+      .like
+        %div{:id => "like-icon-post-#{@article.id.to_s}"}
+          = render "partial/like" 
+      
       .photo
         - @article.photos.each do |article|
           .photo__area
             = image_tag "#{article.image}"
+
+= render "partial/footer"

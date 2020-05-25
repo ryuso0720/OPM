@@ -1,0 +1,10 @@
+= render "partial/header"
+
+= render "users/side"
+
+.logout
+  .logout__contents
+    .logout__contents__head
+      %p ログアウトしますか？
+    .logout__contents__btn
+      = link_to "ログアウト", destroy_user_session_path, method: :delete, class:'btn'
