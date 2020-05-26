@@ -10,5 +10,7 @@ class User < ApplicationRecord
   has_many :likes
   has_many :articles, through: :likes
 
+  has_one :personal
+
   validates :name, presence: true, uniqueness: true
 end

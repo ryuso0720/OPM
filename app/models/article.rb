@@ -6,4 +6,6 @@ class Article < ApplicationRecord
   has_many :users, through: :likes
 
   accepts_nested_attributes_for :photos
+
+  
 end

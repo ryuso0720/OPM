@@ -1,0 +1,57 @@
+.profile {
+  width: calc(100vw - 300px);
+  height: calc(100vh - 60px);
+  float: right;
+  background-color: #caf7f0;
+  margin-top: 60px;
+  position: relative;
+}
+.person {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  &__img {
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    background-color: #eee;
+    &__title {
+      font-size: 20px;
+    }
+    img {
+      margin: 0 auto;
+      width: 400px;
+      height: 400px;
+    }
+  }
+  &__text {
+    align-items: center;
+    width: 100%;
+    h5 {
+      color: silver;
+      text-align: center;
+    }
+    margin-top: 30px;
+    &__int {
+      margin: 0 auto;
+      height: 250px;
+      width: 600px;
+      padding: 0.5em 1em;
+      color: #474747;
+      background: whitesmoke;/*背景色*/
+      border-left: double 7px #4ec4d3;/*左線*/
+      border-right: double 7px #4ec4d3;/*右線*/
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    button {
+      height: 40px;
+      color: white;
+      background-color: steelblue;
+    }
+  }
+}
+

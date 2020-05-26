@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :posts do
   end
 
+
   namespace :api do
     resources :posts, only: :show
   end
@@ -17,7 +18,9 @@ Rails.application.routes.draw do
   end
 
 
-  resources :users, only: :index
+  resources :users, only: :index do
+    resources :personals, only: [:create, :new, :edit, :update]
+  end
   get 'users/:name', controller: 'users', action: 'show'
 
 end

@@ -15,6 +15,10 @@
     - @articles.each do |article|
       .new-posts__list__upper__box
         .new-posts__list__upper__box__left
+          - if article.user.personal.present?
+            = image_tag article.user.personal.icon_image.url
+          - else
+            = image_tag "default.jpg"
         .new-posts__list__upper__box__right
           .new-posts__list__upper__box__right__title
             = link_to article_path "#{article.id}" do

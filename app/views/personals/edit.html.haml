@@ -1,0 +1,24 @@
+= render "partial/header"
+
+= render "users/side"
+
+.profile
+  .notifications
+    - flash.each do |key, value|
+      = content_tag(:div, value, class: key)
+  = form_for [@user, @personal], url: user_personal_path do |f|
+    .profile__image
+      %label.rounded-circle.userProfileImg{:for => "file_photo"}
+        .userProfileImg_description 画像をアップロード
+        %i.fas.fa-camera.fa-3x
+        = f.file_field :icon_image, id: "file_photo"
+      #userImgPreview.userImgPreview
+        %img#thumbnail.userImgPreview_content{:accept => "image/*", :src => ""}/
+        %p.userImgPreview_text 画像をアップロード済み
+
+    .profile__text
+      = f.label :profile, "プロフィール文"
+      %br
+      = f.text_area :profile, class: "materialize-textarea"
+      
+    = f.submit '更新', class: 'profile-btn', data: { disable_with: '更新中...' }

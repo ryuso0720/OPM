@@ -1,0 +1,26 @@
+= render "partial/header"
+
+= render "users/side"
+
+.profile
+  .person
+    .person__img
+      .person__img__title
+      - if current_user.personal.present?
+        = image_tag user.personal.icon_image.url
+      - else
+        = image_tag "default.jpg"
+    .person__text
+      %h5 自己紹介
+      .person__text__int
+        - if current_user.personal.present?
+          = simple_format(user.personal.profile)
+        - else
+          %p 自己紹介文を記入しよう
+    .person__btn
+      - if current_user.personal.present?
+        = button_to edit_user_personal_path([user_id:current_user.id], user.personal.id), class:'personal__btn__new', method: :get do
+          プロフィール編集
+      - else
+        = button_to new_user_personal_path(user_id:current_user.id), class:'personal__btn__new', method: :get do
+          プロフィール作成

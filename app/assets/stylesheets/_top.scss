@@ -114,6 +114,10 @@
           margin-top: 2px;
           margin-right: 8px;
           background-color: blue;
+          img {
+            width: 40px;
+            height: 40px;
+          }
         }
         &__right {
           flex: 1;
