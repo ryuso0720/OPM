@@ -180,6 +180,21 @@
     font-size: 25px;
     border-bottom: 1px solid #3e3e3e;
     font-weight: bold;
+    .card {
+      display: flex;
+      justify-content: space-between;
+      overflow-x: scroll;
+      span.card-title {
+        margin-left: 10px;
+      }
+      .content-box {
+        display: flex;
+        margin-right: 10px;
+        button {
+          margin-right: 10px;
+        }
+      }
+    }
   }
   .col.s12.m12{
     background-color: green;
@@ -196,6 +211,7 @@
 
 .card-content.white-text{
   .card-title {
+    overflow-x: scroll;
     text-align: center;
     border-bottom: 1px solid #3e3e3e;
     font-weight: bold;

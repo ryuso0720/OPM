@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "posts#index"
-  resources :posts do
-  end
-
-
+  resources :posts, only: [:index, :new, :create, :edit, :destroy, :update]
   namespace :api do
     resources :posts, only: :show
   end

@@ -1,7 +1,7 @@
 = render "partial/header"
 .upform
-  %h4 一日の学習を振り返ろう！
-  = form_with model: @post, local: true, method: "POST" do |f|
+  %h4 メモ書き編集
+  = form_with model: @post, local: true, method: "PATCH" do |f|
     .upform__post
       .upform__post__title
         = f.label :title, "タイトル"
@@ -21,7 +21,7 @@
         = f.text_area :text, class: "materialize-textarea", placeholder: "学習内容をメモ書き"
     .upform__postupper
       .upform__postupper__button
-        = f.submit '保存する',  class: "submit-btn", data: { disable_with: '投稿中...' }
+        = f.submit '更新する',  class: "submit-btn", data: { disable_with: '更新中...' }
 
     .upform__returnkey
       = link_to users_path do
