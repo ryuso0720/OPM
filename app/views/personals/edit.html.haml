@@ -3,9 +3,6 @@
 = render "users/side"
 
 .profile
-  .notifications
-    - flash.each do |key, value|
-      = content_tag(:div, value, class: key)
   = form_for [@user, @personal], url: user_personal_path do |f|
     .profile__image
       %label.rounded-circle.userProfileImg{:for => "file_photo"}

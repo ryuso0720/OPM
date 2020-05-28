@@ -2,6 +2,16 @@
 .container-show
   .row
     .col.s8.offset-s2
+      .article-user
+        .article-user__lift
+          - if @article.user.personal.present?
+            = image_tag @article.user.personal.icon_image.url
+          - else
+            = image_tag "default.jpg"
+        .article-user__center
+          @#{@article.user.name}
+        .article-user__right
+          #{@article.created_at.strftime("%Y年%m月%d日")}に更新
       %h2.article-title
         = @article.title
       - if user_signed_in? && current_user.id == @article.user_id
@@ -18,17 +28,18 @@
               %li
                 = link_to '削除', article_path(@article.id),class: "article-delete", method: :delete
               %li
-                = link_to '投稿一覧', root_path
+                = link_to '投稿一覧', controller: 'users', action: 'show', name: "mypost"
               %li
-                = link_to 'いいね！一覧', root_path
+                = link_to 'いいね！一覧', controller: 'users', action: 'show', name: "like"
       .tag
       .card
         .card-content
           %span
             = markdown(@article.body)
       .like
-        %div{:id => "like-icon-post-#{@article.id.to_s}"}
-          = render "partial/like" 
+        - if user_signed_in?
+          %div{:id => "like-icon-post-#{@article.id.to_s}"}
+            = render "partial/like" 
       
       .photo
         - @article.photos.each do |article|

@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @articles = Article.all.limit(10).order(created_at: :desc) 
-    @users = User.includes(:personals)
+    # @users = User.includes(:personals)
   end
 
   def new
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to root_path
+      redirect_to users_path
     else
       render :new
     end

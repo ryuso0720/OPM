@@ -5,7 +5,15 @@ class Article < ApplicationRecord
   has_many :likes
   has_many :users, through: :likes
 
-  accepts_nested_attributes_for :photos
+  accepts_nested_attributes_for :photos, allow_destroy: true
+
+  validates :title, presence: true
+  validates :body, presence: true
+
+  def self.search(search)
+    return Article.all unless search
+    Item.where('title LIKE(?)', "%#{search}%")
+  end
 
   
 end

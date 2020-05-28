@@ -11,10 +11,18 @@ class UsersController < ApplicationController
 
   def show
     @posts = Post.where(user_id: current_user[:id])
+    @articles = Article.where(user_id: current_user[:id]).page(params[:page]).per(15).order("created_at DESC")
+    # いいね
+    @like_articles = current_user.articles.page(params[:page]).per(15).order("created_at DESC")
+    # @users = User.includes(:personals)
     # @pesonal = Personal.find(id: params[:id])
     # @pesonal = Personal.where(user_id: current_user[:id])
     render "users/#{params[:name]}", locals: {user: current_user}
   end
+
+  # def mypost
+  #   @articles = Article.where(user_id: current_user[:id])
+  # end
 
   def chart
     @posts = Post.where(user_id: current_user[:id])

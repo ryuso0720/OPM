@@ -4,7 +4,12 @@
   width: calc(100vw - 300px);
   margin-top: 60px;
   padding-top: 30px;
+  position: fixed;
+  height: 100vh;
+  overflow: scroll;
+  background-color: #ccf2e6;
   &__content100 {
+    padding: 50px 50px 50px 50px;
     #study-chart {
       margin: 0 auto;
     }

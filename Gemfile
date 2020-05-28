@@ -78,4 +78,5 @@ gem 'materialize-sass'
 gem 'carrierwave'
 gem "mini_magick"
 gem "chartkick" 
+gem 'kaminari'
 

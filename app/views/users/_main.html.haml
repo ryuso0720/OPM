@@ -10,7 +10,7 @@
           .content-box
             = button_to edit_post_path(post.id), class:'post-edit', method: :get do
               %i.fas.fa-edit
-            = button_to post_path(post.id), class:'post-delete', method: :delete do
+            = button_to post_path(post.id), class:'post-delete', method: :delete,  data: { confirm: '削除しますか？' } do
               %i.fas.fa-trash-alt
   .row{'v-show': 'postInfoBool'}
     .col.s12.m12

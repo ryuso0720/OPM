@@ -1,0 +1,28 @@
+= render "partial/header"
+
+= render "users/side"
+
+.mylike
+  .like-posts
+    .like-posts__list
+      .like-posts__list__inform
+        いいね！一覧
+      .like-posts__list__upper
+      - @like_articles.each do |article|
+        .like-posts__list__upper__box
+          .like-posts__list__upper__box__left
+            - if article.user.personal.present?
+              = image_tag article.user.personal.icon_image.url
+            - else
+              = image_tag "default.jpg"
+          .like-posts__list__upper__box__right
+            .like-posts__list__upper__box__right__title
+              = link_to article_path "#{article.id}" do
+                = article.title
+            .like-posts__list__upper__box__right__box
+              .like-posts__list__upper__box__right__box__user
+                = article.user.name
+              .like-posts__list__upper__box__right__box__now
+                = article.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .page
+    = paginate(@articles)

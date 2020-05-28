@@ -17,6 +17,7 @@
                     = image_tag image.image.url, data: { index: i }, width: "144", height: '144'
               .label-content
                 %pre.label-box__text-visible.fa.fa-camera
+                  画像選択
             = f.fields_for :photos do |image|
 
               .js-file_group(data-index = "#{image.index}")

@@ -1,3 +1,26 @@
 .post-list
+  .my-posts
+    .my-posts__list
+      .my-posts__list__inform
+        投稿一覧
+      .my-posts__list__upper
+      - @articles.each do |article|
+        .my-posts__list__upper__box
+          .my-posts__list__upper__box__left
+            - if article.user.personal.present?
+              = image_tag article.user.personal.icon_image.url
+            - else
+              = image_tag "default.jpg"
+          .my-posts__list__upper__box__right
+            .my-posts__list__upper__box__right__title
+              = link_to article_path "#{article.id}" do
+                = article.title
+            .my-posts__list__upper__box__right__box
+              .my-posts__list__upper__box__right__box__user
+                = article.user.name
+              .my-posts__list__upper__box__right__box__now
+                = article.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .page
+    = paginate(@articles)
 
 

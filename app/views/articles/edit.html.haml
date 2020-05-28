@@ -1,0 +1,49 @@
+= render "partial/header"
+.container-article
+  .row-all
+    .col.s8.offset-s2
+      .red-text.text-lighten-3
+      = form_for @article do |f|
+        .row-pre
+          #preview-area
+          .title-field
+            = f.label "title"
+            = f.text_field :title
+          .post__drop__box__container
+            .prev-content
+
+              - @article.photos.each do |image|
+                .preview-box
+                  .upper-box
+                    = image_tag image.image.url, width: "200", height: "112", alt: "preview"
+                  .lower-box
+                    .update-box
+                      %label.edit-btn
+                    .delete-box
+                      .delete-btn
+                        %span 削除
+            .label-content
+
+              //プレビューの数に合わせてforオプションを指定
+              = f.label :"photos_attributes_#{@article.photos.length}_image", class: "label-box", id: "label-box--#{@article.photos.length}" do
+                %pre.label-box__text-visible クリックしてファイルをアップロード
+            .hidden-content
+              = f.fields_for :photos do |i|
+
+                //プレビューが出ている分のfile_fieldとdelete用のチェックボックスを設置
+                = i.file_field :image, class: "hidden-field"
+                = i.check_box:_destroy, class: "hidden-checkbox"
+
+                //5つのfile_fieldを準備するに当たって、足りない分を表示
+              - @article.photos.length.upto(4) do |i|
+                %input{name: "article[photos_attributes][#{i}][image]", id: "article_photos_attributes_#{i}_image", class:"hidden-field", type:"file"}
+          .input-field
+            = f.label "content", for: "md-textarea"
+            = f.text_area :body, class: "materialize-textarea", id: "md-textarea"
+        .row-pre2
+          .col.s4
+            .btn#markdown.disabled markdown
+          .col.s4
+            .btn#preview preview
+          .col.s4
+            = f.submit "send", class: "btn"

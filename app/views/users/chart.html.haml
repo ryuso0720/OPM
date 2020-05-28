@@ -5,5 +5,5 @@
 .chart
   .chart__content-100
     = column_chart @posts.limit(30).pluck(:today, :time),id: 'study-chart',
-      width: '90%',height: '500px',colors: ['#b00'],
-      min: 0, max: 24
+      width: '90%',height: '80vh',colors: ['#b00'],
+      min: 0, max: 20
