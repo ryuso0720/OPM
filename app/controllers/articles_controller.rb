@@ -2,6 +2,8 @@ class ArticlesController < ApplicationController
 
   before_action :correct_user, only: [:edit]
   before_action :set_find,only:[:show, :destroy, :edit, :update]
+  before_action :move_to_index, except: [:show, :search]
+  before_action :move_to_session, only: [:new, :edit]
 
   def new
     @article = Article.new
@@ -37,6 +39,10 @@ class ArticlesController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @articles = Article.search(params[:keyword]).page(params[:page]).per(15).order("created_at DESC")
+  end
+
   private
   def create_params
     params.require(:article).permit(:body, :title, photos_attributes: [:image, :image_cache, :id ,:_destroy]).merge(user_id: current_user.id)
@@ -49,6 +55,14 @@ class ArticlesController < ApplicationController
 
   def set_find
     @article = Article.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to root_path unless user_signed_in?
+  end
+
+  def move_to_session
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
 end

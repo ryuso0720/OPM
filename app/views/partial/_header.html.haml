@@ -3,8 +3,9 @@
     = link_to 'OP-M', root_path
   .header__center
     .header__center__search
-      %input{placeholder: "キーワードで検索"}
-      %button 検索
+      = form_with(url: search_articles_path, local: true, method: :get, class: "search-form") do |form|
+        = form.text_field :keyword, placeholder: "キーワードで検索", class: "search-input"
+        = form.submit "search", class: "search-btn"
   .header__right
     - if user_signed_in?
       .header__right__login

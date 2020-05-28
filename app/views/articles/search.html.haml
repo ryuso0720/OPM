@@ -1,0 +1,26 @@
+= render "partial/header"
+
+.search
+  .search-posts
+    .search-posts__list
+      .search-posts__list__inform
+        検索結果
+      .search-posts__list__upper
+      - @articles.each do |article|
+        .search-posts__list__upper__box
+          .search-posts__list__upper__box__left
+            - if article.user.personal.present?
+              = image_tag article.user.personal.icon_image.url
+            - else
+              = image_tag "default.jpg"
+          .search-posts__list__upper__box__right
+            .search-posts__list__upper__box__right__title
+              = link_to article_path "#{article.id}" do
+                = article.title
+            .search-posts__list__upper__box__right__box
+              .search-posts__list__upper__box__right__box__user
+                = article.user.name
+              .search-posts__list__upper__box__right__box__now
+                = article.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .page
+    = paginate(@articles)

@@ -4,9 +4,52 @@
   %h2 Output - manager
   %p アウトプットマネージャーは、日々の学習と学習時間を記録し、学習意欲の向上をサポートするサービスです。
 .content-2
-  How to use
-.content-3
-.content-4
+  .content-2#sa
+    .cotent-2#ss
+      .content-2__title How to use
+      .content-2__text
+        OP-M(アウトプットマネージャー)は、1日単位で学習内容のメモ書きと学習時間を入力するアプリです。
+        %br 
+        また、学んだ内容を記事にして他のユーザーに見てもらうこともできます。
+    .content-3
+      %span.content-3__h
+        1日が学習を振り返ろう
+      %p.content-3__p
+        1日で多く情報をインプットしても次の日をほとんど忘れてしまいます。
+        %br
+        学習した内容を1日終わりにメモ書きすること学習内容が整理されます。
+    .content-4
+      .content-3__h
+        学習時間を記録しよう
+      .content-3__p
+        1日の学習時間を記録すること学習時間の確保を意識させます。
+        %br
+        本アプリでは1日ごとの学習時間をグラフで表示し、自身の学習時間を瞬時に確認できます。
+    .content-5
+      .content-3__h
+        記事を投稿しよう
+      .content-3__p
+        日々学習している内容を記事にし、アウトプットできます。
+        %br
+        メモ書きとは違い他のユーザーも閲覧できるので他人に見てもらうことを意識させます。
+
+.formlogin
+  - unless user_signed_in?
+    .fbox
+      .fbox__name
+        ゲスト用アカウント
+      .fbox__email
+        .fbox__email__label
+          email:
+        .fbox__email__mail
+          guest@gmail.com
+      .fbox__pass
+        .fbox__pass__label
+          password:
+        .fbox__pass__word
+          111111
+
+
 .new-posts
   .new-posts__list
     .new-posts__list__inform

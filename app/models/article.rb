@@ -12,7 +12,7 @@ class Article < ApplicationRecord
 
   def self.search(search)
     return Article.all unless search
-    Item.where('title LIKE(?)', "%#{search}%")
+    Article.where('title LIKE(?)', "%#{search}%")
   end
 
   

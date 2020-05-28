@@ -2,6 +2,23 @@
   box-sizing: border-box;
 }
 
+#ss {
+  width: 60%;
+  margin: 0 auto;
+  height: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-shadow: 10px 10px 25px 15px rgba(0, 0, 0, 0.5);
+}
+
+#sa {
+  height: 80%;
+  width: 80%;
+  margin: 0 auto;
+  border: solid 1px #3e3e40;
+  background-color: #d7e4f5;
+}
+
 .header {
   background-color: #3e3e40;
   display: flex;
@@ -19,16 +36,25 @@
     margin-left: 50px;
     line-height: 60px;
     width: 30%;
-    input {
+    .search-form {
       width: 80%;
       height: 30px;
-    }
-    button {
-      height: 30px;
-      line-height: 30px;
-      background-color: #eee;
+      display: flex;
+      .search-input {
+        color: white;
+      }
+      input {
+        color: white;
+      }
+      .search-btn {
+        margin-top: 15px;
+        height: 30px;
+        margin-left: 20px;
+        background-color: #3e3e40;
+      }
     }
   }
+  
   &__right {
     display: flex;
     line-height: 60px;
@@ -71,18 +97,148 @@
 }
 
 .content-2 {
-  background-color: grey;
-  height: 300px;
+  overflow: visible !important;
+  // background: -webkit-linear-gradient(45deg, #656e6b 10%, #9fbdb3 90%);
+  // background: -moz-linear-gradient(45deg, #656e6b 10%, #9fbdb3 90%);
+  // background: -ms-linear-gradient(45deg, #656e6b 10%, #9fbdb3 90%);
+  // background: -o-linear-gradient(45deg, #656e6b 10%, #9fbdb3 90%);
+  // background: linear-gradient(45deg, #656e6b 10%, #9fbdb3 90%);
+  background-color: white;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__text {
+    text-align: center;
+    margin-top: 2.5em;
+    margin-bottom: 200px;
+  }
 }
 
 .content-3 {
-  background-color:black;
-  height: 300px;
+  position: relative;
+  margin: 10em auto 5em;
+  padding: 0.5em 1em;
+  border: solid 3px #95ccff;
+  border-radius: 8px;
+  width: 40%;
+  align-items: center;
+
+  &__h {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: linear-gradient(45deg, #656e6b 10%, #9fbdb3 90%);
+    color: white;
+    font-weight: bold;
+  }
+  &__p {
+    margin: 1em 1em 1em 1em; 
+  }
 }
 
 .content-4 {
-  background-color: red;
-  height: 300px;
+  margin-top: 50px;
+  position: relative;
+  margin: 5em auto;
+  padding: 0.5em 1em;
+  border: solid 3px #95ccff;
+  border-radius: 8px;
+  width: 40%;
+  &__h {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: linear-gradient(45deg, #656e6b 10%, #9fbdb3 90%);
+    color: white;
+    font-weight: bold;
+  }
+  &__p {
+    margin: 1em 1em 1em 1em; 
+  }
+}
+
+.content-5 {
+  margin-top: 50px;
+  position: relative;
+  margin: 5em auto;
+  padding: 0.5em 1em;
+  border: solid 3px #95ccff;
+  border-radius: 8px;
+  width: 40%;
+  &__h {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: linear-gradient(45deg, #656e6b 10%, #9fbdb3 90%);
+    color: white;
+    font-weight: bold;
+  }
+  &__p {
+    margin: 1em 1em 1em 1em; 
+  }
+}
+
+.formlogin {
+  background-color:#eee;
+  padding: 50px;
+  .fbox {
+    position: relative;
+    margin: 10px auto;
+    padding: 20px;
+    width: 30%;
+    background-color: #fff;
+    color: #000;
+    border: 5px solid #999;
+    border-radius: 3px;
+    box-shadow: 0 0 8px #333, 0 0 2px #555 inset;
+    &__name {
+      border-bottom: #3e3e3e 1px solid;
+      font-size: 25px;
+      text-align: center;
+    }
+    &__email {
+      margin: 10px auto;
+      display: flex;
+      &__label {
+        font-size: 19px;
+        margin-left: 80px;
+      }
+      &__mail {
+        font-size: 19px;
+        margin-left: 10px;
+        text-align: center;
+      }
+    }
+    &__pass {
+      margin-top: 10px;
+      margin-left: 20px;
+      display: flex;
+      &__label {
+        font-size: 19px;
+        margin-left: 80px;
+      }
+      &__word {
+        font-size: 19px;
+        margin-left: 10px;
+      }
+    }
+  }
 }
 
 .new-posts {

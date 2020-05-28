@@ -26,7 +26,7 @@
               %li
                 = link_to '編集', edit_article_path(@article.id),class: "article-edit", method: :get
               %li
-                = link_to '削除', article_path(@article.id),class: "article-delete", method: :delete
+                = link_to '削除', article_path(@article.id),class: "article-delete", method: :delete,  data: { confirm: '削除しますか？' }
               %li
                 = link_to '投稿一覧', controller: 'users', action: 'show', name: "mypost"
               %li
