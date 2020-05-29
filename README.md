@@ -25,6 +25,26 @@ https://op-m.herokuapp.com/
 ## 日々学習している内容を記事にして投稿できる。
 [![Image from Gyazo](https://i.gyazo.com/8aa812e07763da878ba9a69010b03fe7.png)](https://gyazo.com/8aa812e07763da878ba9a69010b03fe7)
 
+# 制作背景
+学習はインプットを中心に行いますが記憶の定着にはアウトプットをした方が効果的だと言われてます。
+<br>
+特に人に教えるのが良いと言われいますがプライベートで人に教える機会ほとんどないです。
+<br>
+そこで学習アウトプット用のアプリを作ろうと考えました。
+
+# DEMO
+## 学習のメモ書き
+- メモ書きしたタイトルが表示されます
+- タイトルをクリックすると右側にメモ内容が表示されます
+[![Image from Gyazo](https://i.gyazo.com/674e679def87a1347762bd0a213e1daf.gif)](https://gyazo.com/674e679def87a1347762bd0a213e1daf)
+## 記事の投稿
+- 画像が５枚まで投稿可能でプレビューもされる。
+- markdown記法が可能でプレビューもできる。
+[![Image from Gyazo](https://i.gyazo.com/7796082e540fd0340c57fc032b0fd52c.gif)](https://gyazo.com/7796082e540fd0340c57fc032b0fd52c)
+## お気に入り機能
+- 投稿記事のいいね！ボタンを押すとお気に入りとしてマイページに表示される
+[![Image from Gyazo](https://i.gyazo.com/6c9c85a73d8a51893cafc2354c72b199.gif)](https://gyazo.com/6c9c85a73d8a51893cafc2354c72b199)
+
 
 
 # DB設計
