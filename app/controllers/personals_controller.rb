@@ -12,7 +12,7 @@ class PersonalsController < ApplicationController
     if @personal.save
       redirect_to root_path
     else
-      redirect_to new_user_personal_path, notice: 'Please enter your profile image and profile text.'
+      redirect_to new_user_personal_path
     end
   end
 
