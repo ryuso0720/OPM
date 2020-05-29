@@ -1,5 +1,7 @@
 # README
 
+# op-m(アウトプットマネージャー)
+[![Image from Gyazo](https://i.gyazo.com/e234c8dea61cbaf82ff7916927e9b8ae.png)](https://gyazo.com/e234c8dea61cbaf82ff7916927e9b8ae)
 # DB設計
 ## usersテーブル
 |Column|Type|Options|
@@ -10,7 +12,6 @@
 ### Association
 - has_one: personal
 - has_many: posts
-- has_many: comments
 - has_many :likes
 
 ## personalsテーブル
@@ -31,51 +32,35 @@
 |title|string|null: false|
 |user|references|foreign_key: true|
 ### Association
-- has_many: comments
-- has_many: likes
-- has_many: images
-- has_many: tag_posts
-- has_many: tags, through: :tag_posts
 - belong_to: user
 
-## tagsテーブル
+## articlesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|title|text|null: false|
+|body|text|null: false|
+|time|integer|null: false|
+|title|string|null: false|
+|user|references|foreign_key: true|
 ### Association
-- has_many: tag_posts
-- has_many: tags, through: :tag_posts
+- belong_to: user
+- has_many: photos
 
-## tag_postテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-### Association
-- belong_to: post
-- belong_to: tag
 
-## imagesテーブル
+## photosテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string||
-|post|references|foreign_key: true|
+|atrticle|references|foreign_key: true|
 ### Association
-- belong_to: post
+- belong_to: article
 
 ## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user|references|foreign_key: true|
-|post|references|foreign_key: true|
+|article|references|foreign_key: true|
 ### Association
-- belong_to: post
+- belong_to: article
 - belong_to: user
 
-## commentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user|references|foreign_key: true|
-|post|references|foreign_key: true|
-### Association
-- belong_to: post
-- belong_to: user
