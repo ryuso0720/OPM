@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    @articles = Article.search(params[:keyword]).page(params[:page]).per(15).order("created_at DESC")
+    @articles = Article.search(params[:keyword]).page(params[:page]).per(10).order("created_at DESC")
   end
 
   private

@@ -4,7 +4,9 @@
   .search-posts
     .search-posts__list
       .search-posts__list__inform
+        ="#{@keyword} "
         検索結果
+        ="#{@articles.count}件表示"
       .search-posts__list__upper
       - @articles.each do |article|
         .search-posts__list__upper__box
