@@ -8,6 +8,7 @@
   .row-all {
     width: 80%;
     margin: 0 auto;
+    overflow: scroll;
   }
 }
 
@@ -17,8 +18,9 @@
 }
 
 .input-field {
+  overflow: scroll;
   textarea {
-    height: 70%;
+    height: 40vh;
   }
 }
 
@@ -26,6 +28,8 @@
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+  overflow: scroll;
+  height: 10vh;
 }
 
 
