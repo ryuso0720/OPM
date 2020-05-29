@@ -14,14 +14,16 @@ https://op-m.herokuapp.com/
 # アプリ概要
 本アプリは、日々の学習と学習時間を記録することができます。
 <br>
-学習時間の管理とアウトプットすることがアプリの目的です。
+日々の学習をインプットだけではなく、アウトプットも行い
+<br>
+習慣付けることを目的としています。
 
 ## 1日の学習内容を振り返りメモ書きを行う。
-
+[![Image from Gyazo](https://i.gyazo.com/27dd624fe347e5db31c9c4b6afa3a827.png)](https://gyazo.com/27dd624fe347e5db31c9c4b6afa3a827)
 ## 1日の学習時間を記録しグラフで表示することができる。
-
+[![Image from Gyazo](https://i.gyazo.com/f33dfc18d467a819d4c434021f381e65.png)](https://gyazo.com/f33dfc18d467a819d4c434021f381e65)
 ## 日々学習している内容を記事にして投稿できる。
-
+[![Image from Gyazo](https://i.gyazo.com/8aa812e07763da878ba9a69010b03fe7.png)](https://gyazo.com/8aa812e07763da878ba9a69010b03fe7)
 
 
 
