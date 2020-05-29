@@ -1,7 +1,12 @@
 # README
 
-# op-m(アウトプットマネージャー)
+# OP-M(アウトプットマネージャー)
 [![Image from Gyazo](https://i.gyazo.com/e234c8dea61cbaf82ff7916927e9b8ae.png)](https://gyazo.com/e234c8dea61cbaf82ff7916927e9b8ae)
+
+## App URL
+https://op-m.herokuapp.com/
+
+
 # DB設計
 ## usersテーブル
 |Column|Type|Options|
