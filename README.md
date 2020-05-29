@@ -6,6 +6,9 @@
 ## App URL
 https://op-m.herokuapp.com/
 
+## ゲスト用アカウント
+|email|password|
+|guest@gmail.com|111111|
 
 # DB設計
 ## usersテーブル
