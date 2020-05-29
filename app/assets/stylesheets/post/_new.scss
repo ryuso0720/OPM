@@ -6,6 +6,7 @@
   height: 100vh;
   padding-top: 80px;
   text-align: center;
+  overflow: scroll;
   &__post {
     width: 60%;
     margin-top: 30px;
@@ -15,11 +16,13 @@
     &__text {
       textarea {
         height: 200px;
+        overflow: scroll;
       }
     }
   }
   &__postupper {
     margin-top: 30px;
+    height: 50px;
     &__button {
     .submit-btn {
       width: 100px;
@@ -36,5 +39,9 @@
       box-shadow: 0 0 2px rgba(0,0,0,0.2);
     }
     }
+  }
+  &__returnkey {
+    height: 60px;
+    margin-bottom: 50px;
   }
 }
