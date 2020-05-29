@@ -196,8 +196,10 @@
 
 .formlogin {
   background-color:#eee;
-  padding: 50px;
+  margin: auto;
   .fbox {
+    text-align: center;
+    top: 20px;
     position: relative;
     margin: 10px auto;
     padding: 20px;
@@ -215,9 +217,9 @@
     &__email {
       margin: 10px auto;
       display: flex;
+      justify-content: center;
       &__label {
         font-size: 19px;
-        margin-left: 80px;
       }
       &__mail {
         font-size: 19px;
@@ -229,9 +231,9 @@
       margin-top: 10px;
       margin-left: 20px;
       display: flex;
+      justify-content: center;
       &__label {
         font-size: 19px;
-        margin-left: 80px;
       }
       &__word {
         font-size: 19px;
@@ -242,10 +244,12 @@
 }
 .topb {
   height: 40px;
-  margin-top: 30px;
-  margin-left: 600px;
   background-color: #95ccff;
   color: white;
+  display: block;
+  width: 10%;
+  margin: 30px auto 0 ;
+
 }
 
 .new-posts {
