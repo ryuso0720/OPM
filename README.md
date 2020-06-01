@@ -53,6 +53,7 @@ https://op-m.herokuapp.com/
 ## 2. 自身が確認したいメモをすぐに見れるようタイトルをクリックしたらその画面で内容を確認できるようにした。
 [![Image from Gyazo](https://i.gyazo.com/9b99c1ed2dac8ac7165d53b4314eaaec.gif)](https://gyazo.com/9b99c1ed2dac8ac7165d53b4314eaaec)
 ## 3. 記事投稿ではアウトプットの表現方法も工夫してもらいたかったのでマークダウン記法を使えるようにした。
+[![Image from Gyazo](https://i.gyazo.com/e7d7c3b88c4b6b9b69357ffe0606b470.gif)](https://gyazo.com/e7d7c3b88c4b6b9b69357ffe0606b470)
 
 # 使用技術
 使用言語：Ruby 2.5.1・JavaScript
