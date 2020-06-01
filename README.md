@@ -51,6 +51,7 @@ https://op-m.herokuapp.com/
 1. 学習時間を記録しそれをグラフで表現することで、自身の学習時間の割合を把握することができる。
 [![Image from Gyazo](https://i.gyazo.com/2c44f63071b49f0e398ac3936a84dbf1.gif)](https://gyazo.com/2c44f63071b49f0e398ac3936a84dbf1)
 2. 自身が確認したいメモをすぐに見れるようタイトルをクリックしたらその画面で内容を確認できるようにした。
+[![Image from Gyazo](https://i.gyazo.com/9b99c1ed2dac8ac7165d53b4314eaaec.gif)](https://gyazo.com/9b99c1ed2dac8ac7165d53b4314eaaec)
 3. 記事投稿ではアウトプットの表現方法も工夫してもらいたかったのでマークダウン記法を使えるようにした。
 
 # 使用技術
